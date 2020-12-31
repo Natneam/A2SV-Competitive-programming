@@ -14,14 +14,14 @@ def add(num1, num2):
     summation = ''
     for i in range(len(strNum1)):
         s = str(int(strNum1[-i-1]) + int(strNum2[-i-1]) + carry)
-        # print(int(strNum2[i-len(strNum2)]))
+        # print(s)
         if len(s) == 2:
             carry = int(s[0])
         else:
             carry = 0
-        summation = s[-len(s)] + summation
-    print(summation);
+        summation = s[-1] + summation
+    return summation
 
 
 
-add(123753959805305, 2345643853094036963)
+# print(add(15075390, 2500758275347))
