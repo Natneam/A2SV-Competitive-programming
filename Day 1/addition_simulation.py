@@ -1,3 +1,4 @@
+from random import randint
 # Calculate a + b
 
 def add(num1, num2):
@@ -27,6 +28,11 @@ def add(num1, num2):
             else:
                 carry = 0
             summation = s[-1] + summation
+        if carry > 0:
+            summation = str(carry) + summation
+        while summation[0] == '0':
+            summation = summation[1:]
+
         if num1Sign == -1 and num2Sign == -1:
             return '-' + summation
         else:
@@ -95,19 +101,22 @@ def add(num1, num2):
             s = str(int(borrow + val1[-i-1]) - int(val2[-i-1]))
             summation = s + summation
             borrow = ''
-        if summation[0] == '0':
+        while summation[0] == '0':
             summation = summation[1:]
+
         if num1Sign == -1:
             return '-' + summation
         return summation
 
-
-a = (add(1507539015075390150753901507539015075390,-12500758275347150753901507539012500758275347150753901507539007582753471507539015075390))
-b = (1507539015075390150753901507539015075390- 12500758275347150753901507539012500758275347150753901507539007582753471507539015075390)
-
-print(a == str(b))
-print(a)
-print(b)
-
-# print(add(-100000000,8532985903459064389))
-# print((-100000000+8532985903459064389))
+for i in range(17390864090):
+    a = randint(-10**1000,10**1000)
+    b = randint(-10**1000,10**1000)
+    c = add(a,b)
+    d = str(a+b)
+    if (c == d) == False:
+        print('sdsdd')
+        print(c)
+        print('===============')
+        print(d)
+        print(int(c)-int(d))
+        break
