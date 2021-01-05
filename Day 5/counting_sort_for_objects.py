@@ -23,11 +23,11 @@ class Dessert:
         self.kind = kind
         self.price = price
 
-array = [Dessert(random.choices(['a','b','c']), random.randint(10,40)) for x in range(15)]
-# for i in array:
+# array = [Dessert(random.choices(['a','b','c']), random.randint(10,40)) for x in range(15)]
+# # for i in array:
+# #     print(f'kind: {i.kind} | price: {i.price}')
+
+# sortedArray = counting_sort(array, 'price')
+
+# for i in sortedArray:
 #     print(f'kind: {i.kind} | price: {i.price}')
-
-sortedArray = counting_sort(array, 'price')
-
-for i in sortedArray:
-    print(f'kind: {i.kind} | price: {i.price}')
