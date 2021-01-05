@@ -113,10 +113,19 @@ def integerDivision(dividend,divisor):
     '''Divides x by y'''
     result = 0
     quotient = 0
+    addBy = 1
     while True:
-        if int(add(result, divisor)) > dividend:
+        addBy = '5' + '0'*(len(str(dividend)) - len(str(divisor)) - 1)
+        if int(add(result, divisor*(int(addBy)))) == dividend or \
+        int(add(result, divisor*(int(addBy)))) == dividend + 1:
             return quotient
-        quotient = add(quotient, 1)
-        result = add(result, divisor)
+        elif addBy == '5':
+            addBy = str(int(addBy) - 1)
+        while int(add(result, divisor*(int(addBy)))) > dividend:
+            addBy = addBy[:-1]
+        quotient = add(quotient, addBy)
+        result = add(result, divisor*(int(addBy)))
 
 print(integerDivision(959828487, 999))
+
+# x = len(a) - len(b)  
