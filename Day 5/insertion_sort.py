@@ -11,16 +11,9 @@ def insertion_sort(array):
         array[indexToInsertAt] = elementToBeInserted
     return array
 
-array = [(random.randint(1,15)) for x in range(15)]
-sortedArray = insertion_sort(array)
-# print(array)
-# print(sortedArray)
-boolean = (sorted(array)==sortedArray)
-
-
-while boolean:
-    array = [(random.randint(1,15)) for x in range(15)]
-    sortedArray = insertion_sort(array)
-    # print(array)
-    # print(sortedArray)
-    boolean = (sorted(array)==sortedArray)
+# array = [(random.randint(1,15)) for x in range(15)]
+# sortedArray = insertion_sort(array)
+# # print(array)
+# # print(sortedArray)
+# boolean = (sorted(array)==sortedArray)
+# print(boolean)
