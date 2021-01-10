@@ -2,7 +2,7 @@
 
 class Solution:
     def hIndex(self, citations: List[int]) -> int:
-        citations.sort()
+        citations.sort() # sorting the array with nlogn time complexity
         counter = 0
         h = 0
         if len(citations) == 0:
