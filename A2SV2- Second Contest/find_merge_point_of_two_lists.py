@@ -23,6 +23,7 @@ def findMergeNode(head1, head2):
         curr_head = curr_head.next
 
 # def findMergeNode(head1, head2):
+#  # handling the problem with stack
 #     stack1 = list()
 #     stack2 = list()
 #     curr_head = head1
@@ -34,11 +35,15 @@ def findMergeNode(head1, head2):
 #         stack2.append(curr_head)
 #         curr_head = curr_head.next
     
+    
+#     possible_answer = None
 #     while True:
-#         possible_answer = None
-#         value_1 = stack1.pop()
-#         value_2 = stack2.pop()
-#         if value_1 == value_2:
-#             possible_answer = value_1
-#         else:
-#             return possible_answer
+#         try:
+#             value_1 = stack1.pop()
+#             value_2 = stack2.pop()
+#             if value_1 == value_2:
+#                 possible_answer = value_1
+#             else:
+#                 return possible_answer.data
+#         except:
+#             return possible_answer.data
