@@ -21,3 +21,24 @@ def findMergeNode(head1, head2):
         if curr_head in set1:
             return curr_head.data
         curr_head = curr_head.next
+
+# def findMergeNode(head1, head2):
+#     stack1 = list()
+#     stack2 = list()
+#     curr_head = head1
+#     while curr_head:
+#         stack1.append(curr_head)
+#         curr_head = curr_head.next
+#     curr_head = head2
+#     while curr_head:
+#         stack2.append(curr_head)
+#         curr_head = curr_head.next
+    
+#     while True:
+#         possible_answer = None
+#         value_1 = stack1.pop()
+#         value_2 = stack2.pop()
+#         if value_1 == value_2:
+#             possible_answer = value_1
+#         else:
+#             return possible_answer
