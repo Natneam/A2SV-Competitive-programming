@@ -11,12 +11,13 @@
 #
 #
 def has_cycle(head):
-    max_list_size = 1000
-    index = 1
     curr_head = head
+    hash_set = set()
     while curr_head:
-        if index > max_list_size:
+        if curr_head in hash_set:
             return 1
+        hash_set.add(curr_head)
         curr_head = curr_head.next
-        index += 1
     return 0
+        
+        
