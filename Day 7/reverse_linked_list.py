@@ -22,7 +22,7 @@ class Solution:
     
         # reversing linked list recursively
 
-#         if not head: #case for empty LinkedLinst
+#         if not head: #case for empty LinkedList
 #             return head
 #         if head.next == None: #base case for the last call
 #             if index == 0:
