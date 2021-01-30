@@ -17,7 +17,6 @@ class Solution:
         return node
 
 # using indices
-
 # class Solution:
 #     def constructMaximumBinaryTree(self, nums: List[int]) -> TreeNode:
 #         return self._helper(nums, 0, len(nums)-1)
@@ -26,7 +25,14 @@ class Solution:
 #         if start > end:
 #             return None
 
-#         indexOfMax = nums.index(max(nums[start:end+1]))
+#         maxValue = -1
+#         indexOfMax = 0
+#         tempStart = start
+#         while tempStart <= end:
+#             if nums[tempStart] > maxValue:
+#                 maxValue = nums[tempStart]
+#                 indexOfMax = tempStart
+#             tempStart += 1         
         
 #         node = TreeNode(nums[indexOfMax])
 #         node.left = self._helper(nums, start, indexOfMax-1)
