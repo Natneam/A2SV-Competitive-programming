@@ -108,24 +108,21 @@ def add(num1, num2):
             return '-' + summation
         return summation
 
-
 def integerDivision(dividend,divisor):
     '''Divides x by y'''
     result = 0
     quotient = 0
-    addBy = 1
-    while True:
-        addBy = '5' + '0'*(len(str(dividend)) - len(str(divisor)) - 1)
-        if int(add(result, divisor*(int(addBy)))) == dividend or \
-        int(add(result, divisor*(int(addBy)))) == dividend + 1:
-            return quotient
-        elif addBy == '5':
-            addBy = str(int(addBy) - 1)
-        while int(add(result, divisor*(int(addBy)))) > dividend:
-            addBy = addBy[:-1]
-        quotient = add(quotient, addBy)
-        result = add(result, divisor*(int(addBy)))
-
-print(integerDivision(959828487, 999))
-
-# x = len(a) - len(b)  
+    bMax = dividend
+    bMin = divisor
+    addBy = bMax - bMin
+    if addBy < 0:
+        return '0'
+    elif addBy == 0:
+        return '1'
+    else:
+        while True:
+            if int(add(result, divisor*(int(addBy)))) > dividend:
+                return quotient
+            quotient = add(quotient, addBy)
+            result = add(result, divisor*(int(addBy)))
+print(integerDivision(100, 5))

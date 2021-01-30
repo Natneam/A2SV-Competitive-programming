@@ -15,3 +15,20 @@ class Solution:
         node.left = self.constructMaximumBinaryTree(nums[:indexOfMax])
         node.right = self.constructMaximumBinaryTree(nums[indexOfMax+1:])
         return node
+
+# using indices
+
+# class Solution:
+#     def constructMaximumBinaryTree(self, nums: List[int]) -> TreeNode:
+#         return self._helper(nums, 0, len(nums)-1)
+        
+#     def _helper(self, nums, start, end):
+#         if start > end:
+#             return None
+
+#         indexOfMax = nums.index(max(nums[start:end+1]))
+        
+#         node = TreeNode(nums[indexOfMax])
+#         node.left = self._helper(nums, start, indexOfMax-1)
+#         node.right = self._helper(nums, indexOfMax+1, end)
+#         return node
