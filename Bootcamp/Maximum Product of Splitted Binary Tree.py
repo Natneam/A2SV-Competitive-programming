@@ -9,7 +9,7 @@ class Solution:
         memo = dict()
         totalSum = self.nodeSum(root, memo)
         
-        product = 0
+        maximumProduct = 0
         queue = deque()
         queue.append(root)
         while queue:
@@ -17,8 +17,8 @@ class Solution:
             if currNode:
                 queue.append(currNode.right)
                 queue.append(currNode.left)
-                product = max(product, self.findProduct(currNode.right,memo, totalSum), self.findProduct(currNode.left,memo, totalSum))
-        return product %  (10**9 + 7)
+                maximumProduct = max(maximumProduct, self.findProduct(currNode.right,memo, totalSum), self.findProduct(currNode.left,memo, totalSum))
+        return maximumProduct %  (10**9 + 7)
         
                 
         
