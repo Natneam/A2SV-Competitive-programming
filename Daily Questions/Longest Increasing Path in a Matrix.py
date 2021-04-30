@@ -1,5 +1,4 @@
 # LINK TO THE PROBLEM => https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
-
 class Solution:
     def longestIncreasingPath(self, matrix: List[List[int]]) -> int:
         longestLength = 0
@@ -12,7 +11,6 @@ class Solution:
                     dp[(row,col)] = val
                 else:
                     longestLength = max(longestLength, dp[(row,col)])
-        print(dp)
         return longestLength
         
         
@@ -39,8 +37,3 @@ class Solution:
         
     def inmatrix(self, matrix, row, col):
         return 0 <= row < len(matrix) and 0 <= col < len(matrix[0])
-        
-            
-            
-            
-                    
